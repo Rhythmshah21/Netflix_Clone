@@ -26,7 +26,7 @@ import {
     };
   
     onAuthStateChanged(firebaseAuth, (currentUser) => {
-      if (currentUser) navigate("");
+      if (currentUser) navigate("/");
     });
   
     return (
