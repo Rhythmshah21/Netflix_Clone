@@ -15,7 +15,7 @@ export default function Movies() {
   const navigate = useNavigate();
   const genresLoaded = useSelector((state) => state.netflix.genresLoaded);
   const movies = useSelector((state) => state.netflix.movies);
-  const genres = useSelector((state) => state.netflix.movies);
+  const genres = useSelector((state) => state.netflix.genres);
 
   const dispatch = useDispatch();
 

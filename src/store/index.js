@@ -18,6 +18,7 @@ export const getGenres = createAsyncThunk("netflix/genres", async () => {
     } = await axios.get(
       "https://api.themoviedb.org/3/genre/movie/list?api_key=c6afe0fbc55aeb3418c97c2948290c40"
     );
+    console.log(genres)
     return genres;
   });
   
