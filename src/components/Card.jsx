@@ -12,6 +12,7 @@ import { firebaseAuth } from "../utils/firebase-config";
 import { useDispatch } from "react-redux";
 // import { removeMovieFromLiked } from "../store";
 import video from "../assets/video.mp4";
+import { removeMovieFromLiked } from "../store";
 
 export default React.memo(function Card({ index, movieData, isLiked = false }) {
   const navigate = useNavigate();
@@ -74,7 +75,7 @@ export default React.memo(function Card({ index, movieData, isLiked = false }) {
                   onClick={() => navigate("/player")}
                 />
                 <RiThumbUpFill title="Like" />
-                {/* <RiThumbDownFill title="Dislike" />
+                <RiThumbDownFill title="Dislike" />
                 {isLiked ? (
                   <BsCheck
                     title="Remove from List"
@@ -83,7 +84,7 @@ export default React.memo(function Card({ index, movieData, isLiked = false }) {
                         removeMovieFromLiked({ movieId: movieData.id, email })
                       )
                     }
-                  /> */}
+                  />
                 ) : (
                   <AiOutlinePlus title="Add to my list" onClick={addToList} />
                 )}
